@@ -8,7 +8,7 @@ const deprecateContext = util.deprecate(
 type CallDelegate = (...args: any[]) => any
 
 const CALL_DELEGATE: CallDelegate = function (this: Hook, ...args: any[]) {
-  this.call = this._createCall('sync')
+  this.call = this.createCall('sync')
   return this.call(...args)
 }
 
@@ -16,12 +16,12 @@ const CALL_ASYNC_DELEGATE: CallDelegate = function (
   this: Hook,
   ...args: any[]
 ) {
-  this.callAsync = this._createCall('async')
+  this.callAsync = this.createCall('async')
   return this.callAsync(...args)
 }
 
 const PROMISE_DELEGATE: CallDelegate = function (this: Hook, ...args: any[]) {
-  this.promise = this._createCall('promise')
+  this.promise = this.createCall('promise')
   return this.promise(...args)
 }
 
