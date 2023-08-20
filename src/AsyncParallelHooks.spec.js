@@ -5,8 +5,8 @@
 'use strict'
 
 const HookTester = require('./HookTester')
-const AsyncParallelHook = require('../AsyncParallelHook')
-const AsyncParallelBailHook = require('../AsyncParallelBailHook')
+const AsyncParallelHook = require('./AsyncParallelHook')
+const AsyncParallelBailHook = require('./AsyncParallelBailHook')
 
 describe('AsyncParallelHook', () => {
   it('should have to correct behavior', async () => {

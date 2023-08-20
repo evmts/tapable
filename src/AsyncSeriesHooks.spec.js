@@ -5,10 +5,10 @@
 'use strict'
 
 const HookTester = require('./HookTester')
-const AsyncSeriesHook = require('../AsyncSeriesHook')
-const AsyncSeriesBailHook = require('../AsyncSeriesBailHook')
-const AsyncSeriesWaterfallHook = require('../AsyncSeriesWaterfallHook')
-const AsyncSeriesLoopHook = require('../AsyncSeriesLoopHook')
+const AsyncSeriesHook = require('./AsyncSeriesHook')
+const AsyncSeriesBailHook = require('./AsyncSeriesBailHook')
+const AsyncSeriesWaterfallHook = require('./AsyncSeriesWaterfallHook')
+const AsyncSeriesLoopHook = require('./AsyncSeriesLoopHook')
 
 describe('AsyncSeriesHook', () => {
   it('should not have call method', () => {
@@ -18,20 +18,24 @@ describe('AsyncSeriesHook', () => {
     expect(typeof hook.promise).toEqual('function')
   })
 
-  it('should have tap method', (done) => {
+  it('should have tap method', async () => {
+    await new Promise((resolve) => {
     const hook = new AsyncSeriesHook([])
-    const mockTap = jest.fn()
+    const mockTap = vi.fn()
     hook.tap('somePlugin', mockTap)
-    hook.callAsync(() => done())
+    hook.callAsync(() => resolve())
     expect(mockTap).toHaveBeenCalledTimes(1)
+    })
   })
 
-  it('should have promise method', (done) => {
+  it('should have promise method', async () => {
+    await new Promise((resolve) => {
     const hook = new AsyncSeriesHook([])
-    const mockTap = jest.fn()
+    const mockTap = vi.fn()
     hook.tap('somePlugin', mockTap)
-    hook.promise().then(() => done())
+    hook.promise().then(() => resolve())
     expect(mockTap).toHaveBeenCalledTimes(1)
+    })
   })
 
   it('should have to correct behavior', async () => {

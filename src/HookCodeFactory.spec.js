@@ -1,10 +1,10 @@
 /*
-	MIT License http://www.opensource.org/licenses/mit-license.php
-	Author Tobias Koppers @sokra
+  MIT License http://www.opensource.org/licenses/mit-license.php
+  Author Tobias Koppers @sokra
 */
 'use strict'
 
-const HookCodeFactory = require('../HookCodeFactory')
+const HookCodeFactory = require('./HookCodeFactory')
 
 const expectNoSyntaxError = (code) => {
   new Function('a, b, c', code)
@@ -62,14 +62,14 @@ describe('HookCodeFactory', () => {
         ],
         interceptors: [
           {
-            call: () => {},
-            tap: () => {},
+            call: () => { },
+            tap: () => { },
           },
           {
-            tap: () => {},
+            tap: () => { },
           },
           {
-            call: () => {},
+            call: () => { },
           },
         ],
       },

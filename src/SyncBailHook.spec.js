@@ -4,7 +4,7 @@
 */
 'use strict'
 
-const SyncBailHook = require('../SyncBailHook')
+const SyncBailHook = require('./SyncBailHook')
 
 describe('SyncBailHook', () => {
   it('should allow to create sync bail hooks', async () => {
@@ -37,9 +37,9 @@ describe('SyncBailHook', () => {
 
   it('should bail on non-null return', async () => {
     const h1 = new SyncBailHook(['a'])
-    const mockCall1 = jest.fn()
-    const mockCall2 = jest.fn(() => 'B')
-    const mockCall3 = jest.fn(() => 'C')
+    const mockCall1 = vi.fn()
+    const mockCall2 = vi.fn(() => 'B')
+    const mockCall3 = vi.fn(() => 'C')
     h1.tap('A', mockCall1)
     h1.tap('B', mockCall2)
     h1.tap('C', mockCall3)
@@ -52,8 +52,8 @@ describe('SyncBailHook', () => {
   it('should allow to intercept calls', () => {
     const hook = new SyncBailHook(['x'])
 
-    const mockCall = jest.fn()
-    const mockTap = jest.fn((x) => x)
+    const mockCall = vi.fn()
+    const mockTap = vi.fn((x) => x)
 
     hook.intercept({
       call: mockCall,

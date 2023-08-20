@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`AsyncParallelBailHook should have to correct behavior 1`] = `
+exports[`AsyncSeriesBailHook > should have to correct behavior 1`] = `
 {
   "async": {
     "callAsyncMultipleAsyncEarlyError": {
@@ -18,19 +18,16 @@ exports[`AsyncParallelBailHook should have to correct behavior 1`] = `
       "type": "async",
     },
     "callAsyncMultipleAsyncLateErrorCalled1": true,
-    "callAsyncMultipleAsyncLateErrorCalled3": true,
     "callAsyncMultipleAsyncLateErrorEarlyResult1": {
       "error": "Error in async2",
       "type": "async",
     },
     "callAsyncMultipleAsyncLateErrorEarlyResult1Called1": true,
-    "callAsyncMultipleAsyncLateErrorEarlyResult1Called3": true,
     "callAsyncMultipleAsyncLateErrorEarlyResult2": {
       "type": "async",
       "value": 42,
     },
     "callAsyncMultipleAsyncLateErrorEarlyResult2Called1": true,
-    "callAsyncMultipleAsyncLateErrorEarlyResult2Called3": true,
     "callAsyncMultipleAsyncWithArg": {
       "type": "async",
       "value": 43,
@@ -63,7 +60,6 @@ exports[`AsyncParallelBailHook should have to correct behavior 1`] = `
       "value": 43,
     },
     "callAsyncMultipleMixed2WithArgCalled1": 42,
-    "callAsyncMultipleMixed2WithArgCalled2": 42,
     "callAsyncMultipleMixed3WithArg": {
       "type": "async",
       "value": 43,
@@ -89,38 +85,31 @@ exports[`AsyncParallelBailHook should have to correct behavior 1`] = `
       "type": "async",
     },
     "callAsyncMultipleMixedLateErrorCalled1": true,
-    "callAsyncMultipleMixedLateErrorCalled2": true,
-    "callAsyncMultipleMixedLateErrorCalled3": true,
     "callAsyncMultiplePromiseEarlyError": {
       "error": "Error in async2",
       "type": "async",
     },
     "callAsyncMultiplePromiseEarlyErrorCalled1": true,
-    "callAsyncMultiplePromiseEarlyErrorCalled3": true,
     "callAsyncMultiplePromiseError": {
       "error": "Error in async2",
       "type": "async",
     },
     "callAsyncMultiplePromiseErrorCalled1": true,
-    "callAsyncMultiplePromiseErrorCalled3": true,
     "callAsyncMultiplePromiseLateError": {
       "error": "Error in async2",
       "type": "async",
     },
     "callAsyncMultiplePromiseLateErrorCalled1": true,
-    "callAsyncMultiplePromiseLateErrorCalled3": true,
     "callAsyncMultiplePromiseWithArg": {
       "type": "async",
       "value": 43,
     },
     "callAsyncMultiplePromiseWithArgCalled1": 42,
-    "callAsyncMultiplePromiseWithArgCalled2": 42,
     "callAsyncMultiplePromiseWithArgFirstReturn": {
       "type": "async",
       "value": 43,
     },
     "callAsyncMultiplePromiseWithArgFirstReturnCalled1": 42,
-    "callAsyncMultiplePromiseWithArgFirstReturnCalled2": 42,
     "callAsyncMultiplePromiseWithArgLastReturn": {
       "type": "async",
       "value": 44,
@@ -225,19 +214,16 @@ exports[`AsyncParallelBailHook should have to correct behavior 1`] = `
       "type": "promise",
     },
     "promiseMultipleAsyncLateErrorCalled1": true,
-    "promiseMultipleAsyncLateErrorCalled3": true,
     "promiseMultipleAsyncLateErrorEarlyResult1": {
       "error": "Error in async2",
       "type": "promise",
     },
     "promiseMultipleAsyncLateErrorEarlyResult1Called1": true,
-    "promiseMultipleAsyncLateErrorEarlyResult1Called3": true,
     "promiseMultipleAsyncLateErrorEarlyResult2": {
       "type": "promise",
       "value": 42,
     },
     "promiseMultipleAsyncLateErrorEarlyResult2Called1": true,
-    "promiseMultipleAsyncLateErrorEarlyResult2Called3": true,
     "promiseMultipleAsyncWithArg": {
       "type": "promise",
       "value": 43,
@@ -270,7 +256,6 @@ exports[`AsyncParallelBailHook should have to correct behavior 1`] = `
       "value": 43,
     },
     "promiseMultipleMixed2WithArgCalled1": 42,
-    "promiseMultipleMixed2WithArgCalled2": 42,
     "promiseMultipleMixed3WithArg": {
       "type": "promise",
       "value": 43,
@@ -296,38 +281,31 @@ exports[`AsyncParallelBailHook should have to correct behavior 1`] = `
       "type": "promise",
     },
     "promiseMultipleMixedLateErrorCalled1": true,
-    "promiseMultipleMixedLateErrorCalled2": true,
-    "promiseMultipleMixedLateErrorCalled3": true,
     "promiseMultiplePromiseEarlyError": {
       "error": "Error in async2",
       "type": "promise",
     },
     "promiseMultiplePromiseEarlyErrorCalled1": true,
-    "promiseMultiplePromiseEarlyErrorCalled3": true,
     "promiseMultiplePromiseError": {
       "error": "Error in async2",
       "type": "promise",
     },
     "promiseMultiplePromiseErrorCalled1": true,
-    "promiseMultiplePromiseErrorCalled3": true,
     "promiseMultiplePromiseLateError": {
       "error": "Error in async2",
       "type": "promise",
     },
     "promiseMultiplePromiseLateErrorCalled1": true,
-    "promiseMultiplePromiseLateErrorCalled3": true,
     "promiseMultiplePromiseWithArg": {
       "type": "promise",
       "value": 43,
     },
     "promiseMultiplePromiseWithArgCalled1": 42,
-    "promiseMultiplePromiseWithArgCalled2": 42,
     "promiseMultiplePromiseWithArgFirstReturn": {
       "type": "promise",
       "value": 43,
     },
     "promiseMultiplePromiseWithArgFirstReturnCalled1": 42,
-    "promiseMultiplePromiseWithArgFirstReturnCalled2": 42,
     "promiseMultiplePromiseWithArgLastReturn": {
       "type": "promise",
       "value": 44,
@@ -717,7 +695,7 @@ exports[`AsyncParallelBailHook should have to correct behavior 1`] = `
 }
 `;
 
-exports[`AsyncParallelHook should have to correct behavior 1`] = `
+exports[`AsyncSeriesHook > should have to correct behavior 1`] = `
 {
   "async": {
     "callAsyncMultipleAsyncEarlyError": {
@@ -735,19 +713,16 @@ exports[`AsyncParallelHook should have to correct behavior 1`] = `
       "type": "async",
     },
     "callAsyncMultipleAsyncLateErrorCalled1": true,
-    "callAsyncMultipleAsyncLateErrorCalled3": true,
     "callAsyncMultipleAsyncLateErrorEarlyResult1": {
       "error": "Error in async2",
       "type": "async",
     },
     "callAsyncMultipleAsyncLateErrorEarlyResult1Called1": true,
-    "callAsyncMultipleAsyncLateErrorEarlyResult1Called3": true,
     "callAsyncMultipleAsyncLateErrorEarlyResult2": {
       "error": "Error in async2",
       "type": "async",
     },
     "callAsyncMultipleAsyncLateErrorEarlyResult2Called1": true,
-    "callAsyncMultipleAsyncLateErrorEarlyResult2Called3": true,
     "callAsyncMultipleAsyncWithArg": {
       "type": "async",
       "value": undefined,
@@ -805,7 +780,6 @@ exports[`AsyncParallelHook should have to correct behavior 1`] = `
     },
     "callAsyncMultipleMixedError2WithArgCalled1": 42,
     "callAsyncMultipleMixedError2WithArgCalled2": 42,
-    "callAsyncMultipleMixedError2WithArgCalled3": 42,
     "callAsyncMultipleMixedError3WithArg": {
       "error": "Error in async",
       "type": "async",
@@ -816,26 +790,21 @@ exports[`AsyncParallelHook should have to correct behavior 1`] = `
       "type": "async",
     },
     "callAsyncMultipleMixedLateErrorCalled1": true,
-    "callAsyncMultipleMixedLateErrorCalled2": true,
-    "callAsyncMultipleMixedLateErrorCalled3": true,
     "callAsyncMultiplePromiseEarlyError": {
       "error": "Error in async2",
       "type": "async",
     },
     "callAsyncMultiplePromiseEarlyErrorCalled1": true,
-    "callAsyncMultiplePromiseEarlyErrorCalled3": true,
     "callAsyncMultiplePromiseError": {
       "error": "Error in async2",
       "type": "async",
     },
     "callAsyncMultiplePromiseErrorCalled1": true,
-    "callAsyncMultiplePromiseErrorCalled3": true,
     "callAsyncMultiplePromiseLateError": {
       "error": "Error in async2",
       "type": "async",
     },
     "callAsyncMultiplePromiseLateErrorCalled1": true,
-    "callAsyncMultiplePromiseLateErrorCalled3": true,
     "callAsyncMultiplePromiseWithArg": {
       "type": "async",
       "value": undefined,
@@ -955,19 +924,16 @@ exports[`AsyncParallelHook should have to correct behavior 1`] = `
       "type": "promise",
     },
     "promiseMultipleAsyncLateErrorCalled1": true,
-    "promiseMultipleAsyncLateErrorCalled3": true,
     "promiseMultipleAsyncLateErrorEarlyResult1": {
       "error": "Error in async2",
       "type": "promise",
     },
     "promiseMultipleAsyncLateErrorEarlyResult1Called1": true,
-    "promiseMultipleAsyncLateErrorEarlyResult1Called3": true,
     "promiseMultipleAsyncLateErrorEarlyResult2": {
       "error": "Error in async2",
       "type": "promise",
     },
     "promiseMultipleAsyncLateErrorEarlyResult2Called1": true,
-    "promiseMultipleAsyncLateErrorEarlyResult2Called3": true,
     "promiseMultipleAsyncWithArg": {
       "type": "promise",
       "value": undefined,
@@ -1025,7 +991,6 @@ exports[`AsyncParallelHook should have to correct behavior 1`] = `
     },
     "promiseMultipleMixedError2WithArgCalled1": 42,
     "promiseMultipleMixedError2WithArgCalled2": 42,
-    "promiseMultipleMixedError2WithArgCalled3": 42,
     "promiseMultipleMixedError3WithArg": {
       "error": "Error in async",
       "type": "promise",
@@ -1036,26 +1001,21 @@ exports[`AsyncParallelHook should have to correct behavior 1`] = `
       "type": "promise",
     },
     "promiseMultipleMixedLateErrorCalled1": true,
-    "promiseMultipleMixedLateErrorCalled2": true,
-    "promiseMultipleMixedLateErrorCalled3": true,
     "promiseMultiplePromiseEarlyError": {
       "error": "Error in async2",
       "type": "promise",
     },
     "promiseMultiplePromiseEarlyErrorCalled1": true,
-    "promiseMultiplePromiseEarlyErrorCalled3": true,
     "promiseMultiplePromiseError": {
       "error": "Error in async2",
       "type": "promise",
     },
     "promiseMultiplePromiseErrorCalled1": true,
-    "promiseMultiplePromiseErrorCalled3": true,
     "promiseMultiplePromiseLateError": {
       "error": "Error in async2",
       "type": "promise",
     },
     "promiseMultiplePromiseLateErrorCalled1": true,
-    "promiseMultiplePromiseLateErrorCalled3": true,
     "promiseMultiplePromiseWithArg": {
       "type": "promise",
       "value": undefined,
@@ -1470,6 +1430,791 @@ exports[`AsyncParallelHook should have to correct behavior 1`] = `
     "promiseSingleSyncWithArg": {
       "type": "promise",
       "value": undefined,
+    },
+    "promiseSingleSyncWithArgCalled": 42,
+  },
+}
+`;
+
+exports[`AsyncSeriesLoopHook > should have to correct behavior 1`] = `
+{
+  "async": {
+    "callAsyncBrokenPromise": {
+      "error": "Tap function (tapPromise) did not return promise (returned this is not a promise)",
+    },
+    "callAsyncMixed": {
+      "type": "async",
+      "value": undefined,
+    },
+    "callAsyncMixedCalled1": 124,
+    "callAsyncMixedCalled2": 83,
+    "callAsyncMixedCalled3": 42,
+    "callAsyncMultipleAsync": {
+      "type": "async",
+      "value": undefined,
+    },
+    "callAsyncMultipleAsyncCalled1": 83,
+    "callAsyncMultipleAsyncCalled2": 42,
+    "callAsyncMultiplePromise": {
+      "type": "async",
+      "value": undefined,
+    },
+    "callAsyncMultiplePromiseCalled1": 83,
+    "callAsyncMultiplePromiseCalled2": 42,
+    "callAsyncSingleAsync": {
+      "type": "async",
+      "value": undefined,
+    },
+    "callAsyncSingleAsyncCalled": 42,
+    "callAsyncSinglePromise": {
+      "type": "async",
+      "value": undefined,
+    },
+    "callAsyncSinglePromiseCalled": 42,
+    "promiseBrokenPromise": {
+      "error": "Tap function (tapPromise) did not return promise (returned this is not a promise)",
+      "type": "promise",
+    },
+    "promiseMixed": {
+      "type": "promise",
+      "value": undefined,
+    },
+    "promiseMixedCalled1": 124,
+    "promiseMixedCalled2": 83,
+    "promiseMixedCalled3": 42,
+    "promiseMultipleAsync": {
+      "type": "promise",
+      "value": undefined,
+    },
+    "promiseMultipleAsyncCalled1": 83,
+    "promiseMultipleAsyncCalled2": 42,
+    "promiseMultiplePromise": {
+      "type": "promise",
+      "value": undefined,
+    },
+    "promiseMultiplePromiseCalled1": 83,
+    "promiseMultiplePromiseCalled2": 42,
+    "promiseSingleAsync": {
+      "type": "promise",
+      "value": undefined,
+    },
+    "promiseSingleAsyncCalled": 42,
+    "promiseSinglePromise": {
+      "type": "promise",
+      "value": undefined,
+    },
+    "promiseSinglePromiseCalled": 42,
+  },
+  "sync": {
+    "callAsyncInterceptedSync": {
+      "type": "async",
+      "value": undefined,
+    },
+    "callAsyncInterceptedSyncCalled1": 83,
+    "callAsyncInterceptedSyncCalled2": 42,
+    "callAsyncInterceptedSyncCalledTap": 125,
+    "callAsyncMultipleSync": {
+      "type": "async",
+      "value": undefined,
+    },
+    "callAsyncMultipleSyncCalled1": 83,
+    "callAsyncMultipleSyncCalled2": 42,
+    "callAsyncNone": {
+      "type": "async",
+      "value": undefined,
+    },
+    "callAsyncNoneWithArg": {
+      "type": "async",
+      "value": undefined,
+    },
+    "callAsyncSingleSync": {
+      "type": "async",
+      "value": undefined,
+    },
+    "callAsyncSingleSyncCalled": 42,
+    "promiseInterceptedSync": {
+      "type": "promise",
+      "value": undefined,
+    },
+    "promiseInterceptedSyncCalled1": 83,
+    "promiseInterceptedSyncCalled2": 42,
+    "promiseInterceptedSyncCalledTap": 125,
+    "promiseMultipleSync": {
+      "type": "promise",
+      "value": undefined,
+    },
+    "promiseMultipleSyncCalled1": 83,
+    "promiseMultipleSyncCalled2": 42,
+    "promiseNone": {
+      "type": "promise",
+      "value": undefined,
+    },
+    "promiseNoneWithArg": {
+      "type": "promise",
+      "value": undefined,
+    },
+    "promiseSingleSync": {
+      "type": "promise",
+      "value": undefined,
+    },
+    "promiseSingleSyncCalled": 42,
+  },
+}
+`;
+
+exports[`AsyncSeriesWaterfallHook > should have to correct behavior 1`] = `
+{
+  "async": {
+    "callAsyncMultipleAsyncEarlyError": {
+      "error": "Waterfall hooks must have at least one argument",
+    },
+    "callAsyncMultipleAsyncError": {
+      "error": "Waterfall hooks must have at least one argument",
+    },
+    "callAsyncMultipleAsyncLateError": {
+      "error": "Waterfall hooks must have at least one argument",
+    },
+    "callAsyncMultipleAsyncLateErrorEarlyResult1": {
+      "error": "Waterfall hooks must have at least one argument",
+    },
+    "callAsyncMultipleAsyncLateErrorEarlyResult2": {
+      "error": "Waterfall hooks must have at least one argument",
+    },
+    "callAsyncMultipleAsyncWithArg": {
+      "type": "async",
+      "value": 45,
+    },
+    "callAsyncMultipleAsyncWithArgCalled1": 42,
+    "callAsyncMultipleAsyncWithArgCalled2": 43,
+    "callAsyncMultipleAsyncWithArgFirstReturn": {
+      "type": "async",
+      "value": 43,
+    },
+    "callAsyncMultipleAsyncWithArgFirstReturnCalled1": 42,
+    "callAsyncMultipleAsyncWithArgFirstReturnCalled2": 43,
+    "callAsyncMultipleAsyncWithArgLastReturn": {
+      "type": "async",
+      "value": 44,
+    },
+    "callAsyncMultipleAsyncWithArgLastReturnCalled1": 42,
+    "callAsyncMultipleAsyncWithArgLastReturnCalled2": 42,
+    "callAsyncMultipleAsyncWithArgNoReturn": {
+      "type": "async",
+      "value": 42,
+    },
+    "callAsyncMultipleAsyncWithArgNoReturnCalled1": 42,
+    "callAsyncMultipleAsyncWithArgNoReturnCalled2": 42,
+    "callAsyncMultipleMixed1WithArg": {
+      "type": "async",
+      "value": 48,
+    },
+    "callAsyncMultipleMixed1WithArgCalled1": 42,
+    "callAsyncMultipleMixed1WithArgCalled2": 43,
+    "callAsyncMultipleMixed1WithArgCalled3": 45,
+    "callAsyncMultipleMixed2WithArg": {
+      "type": "async",
+      "value": 45,
+    },
+    "callAsyncMultipleMixed2WithArgCalled1": 42,
+    "callAsyncMultipleMixed2WithArgCalled2": 43,
+    "callAsyncMultipleMixed3WithArg": {
+      "type": "async",
+      "value": 48,
+    },
+    "callAsyncMultipleMixed3WithArgCalled1": 42,
+    "callAsyncMultipleMixed3WithArgCalled2": 43,
+    "callAsyncMultipleMixed3WithArgCalled3": 45,
+    "callAsyncMultipleMixedError1WithArg": {
+      "error": "Error in sync",
+      "type": "async",
+    },
+    "callAsyncMultipleMixedError1WithArgCalled1": 42,
+    "callAsyncMultipleMixedError1WithArgCalled2": 42,
+    "callAsyncMultipleMixedError1WithArgCalled3": 43,
+    "callAsyncMultipleMixedError2WithArg": {
+      "error": "Error in promise",
+      "type": "async",
+    },
+    "callAsyncMultipleMixedError2WithArgCalled1": 42,
+    "callAsyncMultipleMixedError2WithArgCalled2": 42,
+    "callAsyncMultipleMixedError3WithArg": {
+      "error": "Error in async",
+      "type": "async",
+    },
+    "callAsyncMultipleMixedError3WithArgCalled1": 42,
+    "callAsyncMultipleMixedLateError": {
+      "error": "Waterfall hooks must have at least one argument",
+    },
+    "callAsyncMultiplePromiseEarlyError": {
+      "error": "Waterfall hooks must have at least one argument",
+    },
+    "callAsyncMultiplePromiseError": {
+      "error": "Waterfall hooks must have at least one argument",
+    },
+    "callAsyncMultiplePromiseLateError": {
+      "error": "Waterfall hooks must have at least one argument",
+    },
+    "callAsyncMultiplePromiseWithArg": {
+      "type": "async",
+      "value": 45,
+    },
+    "callAsyncMultiplePromiseWithArgCalled1": 42,
+    "callAsyncMultiplePromiseWithArgCalled2": 43,
+    "callAsyncMultiplePromiseWithArgFirstReturn": {
+      "type": "async",
+      "value": 43,
+    },
+    "callAsyncMultiplePromiseWithArgFirstReturnCalled1": 42,
+    "callAsyncMultiplePromiseWithArgFirstReturnCalled2": 43,
+    "callAsyncMultiplePromiseWithArgLastReturn": {
+      "type": "async",
+      "value": 44,
+    },
+    "callAsyncMultiplePromiseWithArgLastReturnCalled1": 42,
+    "callAsyncMultiplePromiseWithArgLastReturnCalled2": 42,
+    "callAsyncMultiplePromiseWithArgNoReturn": {
+      "type": "async",
+      "value": 42,
+    },
+    "callAsyncMultiplePromiseWithArgNoReturnCalled1": 42,
+    "callAsyncMultiplePromiseWithArgNoReturnCalled2": 42,
+    "callAsyncMultipleSync": {
+      "error": "Waterfall hooks must have at least one argument",
+    },
+    "callAsyncMultipleSyncError": {
+      "error": "Waterfall hooks must have at least one argument",
+    },
+    "callAsyncMultipleSyncLastReturn": {
+      "error": "Waterfall hooks must have at least one argument",
+    },
+    "callAsyncMultipleSyncNoReturn": {
+      "error": "Waterfall hooks must have at least one argument",
+    },
+    "callAsyncMultipleSyncWithArg": {
+      "type": "async",
+      "value": 45,
+    },
+    "callAsyncMultipleSyncWithArgCalled1": 42,
+    "callAsyncMultipleSyncWithArgCalled2": 43,
+    "callAsyncMultipleSyncWithArgFirstReturn": {
+      "type": "async",
+      "value": 43,
+    },
+    "callAsyncMultipleSyncWithArgFirstReturnCalled1": 42,
+    "callAsyncMultipleSyncWithArgFirstReturnCalled2": 43,
+    "callAsyncMultipleSyncWithArgLastReturn": {
+      "type": "async",
+      "value": 44,
+    },
+    "callAsyncMultipleSyncWithArgLastReturnCalled1": 42,
+    "callAsyncMultipleSyncWithArgLastReturnCalled2": 42,
+    "callAsyncMultipleSyncWithArgNoReturn": {
+      "type": "async",
+      "value": 42,
+    },
+    "callAsyncMultipleSyncWithArgNoReturnCalled1": 42,
+    "callAsyncMultipleSyncWithArgNoReturnCalled2": 42,
+    "callAsyncNone": {
+      "error": "Waterfall hooks must have at least one argument",
+    },
+    "callAsyncNoneWithArg": {
+      "type": "async",
+      "value": 42,
+    },
+    "callAsyncSingleAsyncWithArg": {
+      "type": "async",
+      "value": 42,
+    },
+    "callAsyncSingleAsyncWithArgCalled1": 42,
+    "callAsyncSinglePromiseWithArg": {
+      "type": "async",
+      "value": 43,
+    },
+    "callAsyncSinglePromiseWithArgCalled1": 42,
+    "callAsyncSingleSync": {
+      "error": "Waterfall hooks must have at least one argument",
+    },
+    "callAsyncSingleSyncWithArg": {
+      "type": "async",
+      "value": 43,
+    },
+    "callAsyncSingleSyncWithArgCalled1": 42,
+    "callAsyncSingleSyncWithArgNoReturn": {
+      "type": "async",
+      "value": 42,
+    },
+    "callAsyncSingleSyncWithArgNoReturnCalled1": 42,
+    "promiseMultipleAsyncEarlyError": {
+      "error": "Waterfall hooks must have at least one argument",
+    },
+    "promiseMultipleAsyncError": {
+      "error": "Waterfall hooks must have at least one argument",
+    },
+    "promiseMultipleAsyncLateError": {
+      "error": "Waterfall hooks must have at least one argument",
+    },
+    "promiseMultipleAsyncLateErrorEarlyResult1": {
+      "error": "Waterfall hooks must have at least one argument",
+    },
+    "promiseMultipleAsyncLateErrorEarlyResult2": {
+      "error": "Waterfall hooks must have at least one argument",
+    },
+    "promiseMultipleAsyncWithArg": {
+      "type": "promise",
+      "value": 45,
+    },
+    "promiseMultipleAsyncWithArgCalled1": 42,
+    "promiseMultipleAsyncWithArgCalled2": 43,
+    "promiseMultipleAsyncWithArgFirstReturn": {
+      "type": "promise",
+      "value": 43,
+    },
+    "promiseMultipleAsyncWithArgFirstReturnCalled1": 42,
+    "promiseMultipleAsyncWithArgFirstReturnCalled2": 43,
+    "promiseMultipleAsyncWithArgLastReturn": {
+      "type": "promise",
+      "value": 44,
+    },
+    "promiseMultipleAsyncWithArgLastReturnCalled1": 42,
+    "promiseMultipleAsyncWithArgLastReturnCalled2": 42,
+    "promiseMultipleAsyncWithArgNoReturn": {
+      "type": "promise",
+      "value": 42,
+    },
+    "promiseMultipleAsyncWithArgNoReturnCalled1": 42,
+    "promiseMultipleAsyncWithArgNoReturnCalled2": 42,
+    "promiseMultipleMixed1WithArg": {
+      "type": "promise",
+      "value": 48,
+    },
+    "promiseMultipleMixed1WithArgCalled1": 42,
+    "promiseMultipleMixed1WithArgCalled2": 43,
+    "promiseMultipleMixed1WithArgCalled3": 45,
+    "promiseMultipleMixed2WithArg": {
+      "type": "promise",
+      "value": 45,
+    },
+    "promiseMultipleMixed2WithArgCalled1": 42,
+    "promiseMultipleMixed2WithArgCalled2": 43,
+    "promiseMultipleMixed3WithArg": {
+      "type": "promise",
+      "value": 48,
+    },
+    "promiseMultipleMixed3WithArgCalled1": 42,
+    "promiseMultipleMixed3WithArgCalled2": 43,
+    "promiseMultipleMixed3WithArgCalled3": 45,
+    "promiseMultipleMixedError1WithArg": {
+      "error": "Error in sync",
+      "type": "promise",
+    },
+    "promiseMultipleMixedError1WithArgCalled1": 42,
+    "promiseMultipleMixedError1WithArgCalled2": 42,
+    "promiseMultipleMixedError1WithArgCalled3": 43,
+    "promiseMultipleMixedError2WithArg": {
+      "error": "Error in promise",
+      "type": "promise",
+    },
+    "promiseMultipleMixedError2WithArgCalled1": 42,
+    "promiseMultipleMixedError2WithArgCalled2": 42,
+    "promiseMultipleMixedError3WithArg": {
+      "error": "Error in async",
+      "type": "promise",
+    },
+    "promiseMultipleMixedError3WithArgCalled1": 42,
+    "promiseMultipleMixedLateError": {
+      "error": "Waterfall hooks must have at least one argument",
+    },
+    "promiseMultiplePromiseEarlyError": {
+      "error": "Waterfall hooks must have at least one argument",
+    },
+    "promiseMultiplePromiseError": {
+      "error": "Waterfall hooks must have at least one argument",
+    },
+    "promiseMultiplePromiseLateError": {
+      "error": "Waterfall hooks must have at least one argument",
+    },
+    "promiseMultiplePromiseWithArg": {
+      "type": "promise",
+      "value": 45,
+    },
+    "promiseMultiplePromiseWithArgCalled1": 42,
+    "promiseMultiplePromiseWithArgCalled2": 43,
+    "promiseMultiplePromiseWithArgFirstReturn": {
+      "type": "promise",
+      "value": 43,
+    },
+    "promiseMultiplePromiseWithArgFirstReturnCalled1": 42,
+    "promiseMultiplePromiseWithArgFirstReturnCalled2": 43,
+    "promiseMultiplePromiseWithArgLastReturn": {
+      "type": "promise",
+      "value": 44,
+    },
+    "promiseMultiplePromiseWithArgLastReturnCalled1": 42,
+    "promiseMultiplePromiseWithArgLastReturnCalled2": 42,
+    "promiseMultiplePromiseWithArgNoReturn": {
+      "type": "promise",
+      "value": 42,
+    },
+    "promiseMultiplePromiseWithArgNoReturnCalled1": 42,
+    "promiseMultiplePromiseWithArgNoReturnCalled2": 42,
+    "promiseMultipleSync": {
+      "error": "Waterfall hooks must have at least one argument",
+    },
+    "promiseMultipleSyncError": {
+      "error": "Waterfall hooks must have at least one argument",
+    },
+    "promiseMultipleSyncLastReturn": {
+      "error": "Waterfall hooks must have at least one argument",
+    },
+    "promiseMultipleSyncNoReturn": {
+      "error": "Waterfall hooks must have at least one argument",
+    },
+    "promiseMultipleSyncWithArg": {
+      "type": "promise",
+      "value": 45,
+    },
+    "promiseMultipleSyncWithArgCalled1": 42,
+    "promiseMultipleSyncWithArgCalled2": 43,
+    "promiseMultipleSyncWithArgFirstReturn": {
+      "type": "promise",
+      "value": 43,
+    },
+    "promiseMultipleSyncWithArgFirstReturnCalled1": 42,
+    "promiseMultipleSyncWithArgFirstReturnCalled2": 43,
+    "promiseMultipleSyncWithArgLastReturn": {
+      "type": "promise",
+      "value": 44,
+    },
+    "promiseMultipleSyncWithArgLastReturnCalled1": 42,
+    "promiseMultipleSyncWithArgLastReturnCalled2": 42,
+    "promiseMultipleSyncWithArgNoReturn": {
+      "type": "promise",
+      "value": 42,
+    },
+    "promiseMultipleSyncWithArgNoReturnCalled1": 42,
+    "promiseMultipleSyncWithArgNoReturnCalled2": 42,
+    "promiseNone": {
+      "error": "Waterfall hooks must have at least one argument",
+    },
+    "promiseNoneWithArg": {
+      "type": "promise",
+      "value": 42,
+    },
+    "promiseSingleAsyncWithArg": {
+      "type": "promise",
+      "value": 42,
+    },
+    "promiseSingleAsyncWithArgCalled1": 42,
+    "promiseSinglePromiseWithArg": {
+      "type": "promise",
+      "value": 43,
+    },
+    "promiseSinglePromiseWithArgCalled1": 42,
+    "promiseSingleSync": {
+      "error": "Waterfall hooks must have at least one argument",
+    },
+    "promiseSingleSyncWithArg": {
+      "type": "promise",
+      "value": 43,
+    },
+    "promiseSingleSyncWithArgCalled1": 42,
+    "promiseSingleSyncWithArgNoReturn": {
+      "type": "promise",
+      "value": 42,
+    },
+    "promiseSingleSyncWithArgNoReturnCalled1": 42,
+  },
+  "intercept": {
+    "callAsyncContextIntercepted": {
+      "type": "async",
+      "value": 48,
+    },
+    "callAsyncContextInterceptedCall1": [
+      {
+        "number": 42,
+      },
+      1,
+      2,
+      3,
+    ],
+    "callAsyncContextInterceptedCall2": [
+      1,
+      2,
+      3,
+    ],
+    "callAsyncContextInterceptedTap1": {
+      "number": 42,
+    },
+    "callAsyncIntercepted": {
+      "type": "async",
+      "value": 9,
+    },
+    "callAsyncInterceptedCall1": [
+      1,
+      2,
+      3,
+    ],
+    "callAsyncInterceptedCall2": [
+      1,
+      2,
+      3,
+    ],
+    "callAsyncInterceptedResult1": 9,
+    "callAsyncInterceptedResult2": 9,
+    "callAsyncInterceptedTap1": {
+      "fn": 2,
+      "name": "promise",
+      "type": "promise",
+    },
+    "callAsyncInterceptedTap2": {
+      "fn": 3,
+      "name": "sync",
+      "type": "sync",
+    },
+    "callAsyncUnusedContextIntercepted": {
+      "type": "async",
+      "value": 6,
+    },
+    "callAsyncUnusedContextInterceptedCall1": [
+      undefined,
+      1,
+      2,
+      3,
+    ],
+    "callAsyncUnusedContextInterceptedCall2": [
+      1,
+      2,
+      3,
+    ],
+    "callAsyncUnusedContextInterceptedTap1": undefined,
+    "promiseContextIntercepted": {
+      "type": "promise",
+      "value": 48,
+    },
+    "promiseContextInterceptedCall1": [
+      {
+        "number": 42,
+      },
+      1,
+      2,
+      3,
+    ],
+    "promiseContextInterceptedCall2": [
+      1,
+      2,
+      3,
+    ],
+    "promiseContextInterceptedTap1": {
+      "number": 42,
+    },
+    "promiseIntercepted": {
+      "type": "promise",
+      "value": 9,
+    },
+    "promiseInterceptedCall1": [
+      1,
+      2,
+      3,
+    ],
+    "promiseInterceptedCall2": [
+      1,
+      2,
+      3,
+    ],
+    "promiseInterceptedResult1": 9,
+    "promiseInterceptedResult2": 9,
+    "promiseInterceptedTap1": {
+      "fn": 2,
+      "name": "promise",
+      "type": "promise",
+    },
+    "promiseInterceptedTap2": {
+      "fn": 3,
+      "name": "sync",
+      "type": "sync",
+    },
+    "promiseUnusedContextIntercepted": {
+      "type": "promise",
+      "value": 6,
+    },
+    "promiseUnusedContextInterceptedCall1": [
+      undefined,
+      1,
+      2,
+      3,
+    ],
+    "promiseUnusedContextInterceptedCall2": [
+      1,
+      2,
+      3,
+    ],
+    "promiseUnusedContextInterceptedTap1": undefined,
+  },
+  "sync": {
+    "callAsyncIntercepted": {
+      "type": "async",
+      "value": 9,
+    },
+    "callAsyncInterceptedCall1": [
+      1,
+      2,
+      3,
+    ],
+    "callAsyncInterceptedCall2": [
+      1,
+      2,
+      3,
+    ],
+    "callAsyncInterceptedTap1": {
+      "fn": 2,
+      "name": "sync2",
+      "type": "sync",
+    },
+    "callAsyncInterceptedTap2": {
+      "fn": 3,
+      "name": "sync1",
+      "type": "sync",
+    },
+    "callAsyncMultipleSync": {
+      "error": "Waterfall hooks must have at least one argument",
+    },
+    "callAsyncMultipleSyncError": {
+      "error": "Waterfall hooks must have at least one argument",
+    },
+    "callAsyncMultipleSyncWithArg": {
+      "type": "async",
+      "value": 127,
+    },
+    "callAsyncMultipleSyncWithArgCalled1": 42,
+    "callAsyncMultipleSyncWithArgCalled2": 84,
+    "callAsyncMultipleSyncWithArgFirstReturn": {
+      "type": "async",
+      "value": 84,
+    },
+    "callAsyncMultipleSyncWithArgFirstReturnCalled1": 42,
+    "callAsyncMultipleSyncWithArgFirstReturnCalled2": 84,
+    "callAsyncMultipleSyncWithArgLastReturn": {
+      "type": "async",
+      "value": 85,
+    },
+    "callAsyncMultipleSyncWithArgLastReturnCalled1": 42,
+    "callAsyncMultipleSyncWithArgLastReturnCalled2": 42,
+    "callAsyncMultipleSyncWithArgNoReturn": {
+      "type": "async",
+      "value": 42,
+    },
+    "callAsyncMultipleSyncWithArgNoReturnCalled1": 42,
+    "callAsyncMultipleSyncWithArgNoReturnCalled2": 42,
+    "callAsyncMultipleSyncWithArgs": {
+      "type": "async",
+      "value": 217,
+    },
+    "callAsyncMultipleSyncWithArgsCalled1": [
+      42,
+      43,
+      44,
+    ],
+    "callAsyncMultipleSyncWithArgsCalled2": [
+      129,
+      43,
+      44,
+    ],
+    "callAsyncNone": {
+      "error": "Waterfall hooks must have at least one argument",
+    },
+    "callAsyncNoneWithArg": {
+      "type": "async",
+      "value": 42,
+    },
+    "callAsyncSingleSync": {
+      "error": "Waterfall hooks must have at least one argument",
+    },
+    "callAsyncSingleSyncWithArg": {
+      "type": "async",
+      "value": 42,
+    },
+    "callAsyncSingleSyncWithArgCalled": 42,
+    "promiseIntercepted": {
+      "type": "promise",
+      "value": 9,
+    },
+    "promiseInterceptedCall1": [
+      1,
+      2,
+      3,
+    ],
+    "promiseInterceptedCall2": [
+      1,
+      2,
+      3,
+    ],
+    "promiseInterceptedTap1": {
+      "fn": 2,
+      "name": "sync2",
+      "type": "sync",
+    },
+    "promiseInterceptedTap2": {
+      "fn": 3,
+      "name": "sync1",
+      "type": "sync",
+    },
+    "promiseMultipleSync": {
+      "error": "Waterfall hooks must have at least one argument",
+    },
+    "promiseMultipleSyncError": {
+      "error": "Waterfall hooks must have at least one argument",
+    },
+    "promiseMultipleSyncWithArg": {
+      "type": "promise",
+      "value": 127,
+    },
+    "promiseMultipleSyncWithArgCalled1": 42,
+    "promiseMultipleSyncWithArgCalled2": 84,
+    "promiseMultipleSyncWithArgFirstReturn": {
+      "type": "promise",
+      "value": 84,
+    },
+    "promiseMultipleSyncWithArgFirstReturnCalled1": 42,
+    "promiseMultipleSyncWithArgFirstReturnCalled2": 84,
+    "promiseMultipleSyncWithArgLastReturn": {
+      "type": "promise",
+      "value": 85,
+    },
+    "promiseMultipleSyncWithArgLastReturnCalled1": 42,
+    "promiseMultipleSyncWithArgLastReturnCalled2": 42,
+    "promiseMultipleSyncWithArgNoReturn": {
+      "type": "promise",
+      "value": 42,
+    },
+    "promiseMultipleSyncWithArgNoReturnCalled1": 42,
+    "promiseMultipleSyncWithArgNoReturnCalled2": 42,
+    "promiseMultipleSyncWithArgs": {
+      "type": "promise",
+      "value": 217,
+    },
+    "promiseMultipleSyncWithArgsCalled1": [
+      42,
+      43,
+      44,
+    ],
+    "promiseMultipleSyncWithArgsCalled2": [
+      129,
+      43,
+      44,
+    ],
+    "promiseNone": {
+      "error": "Waterfall hooks must have at least one argument",
+    },
+    "promiseNoneWithArg": {
+      "type": "promise",
+      "value": 42,
+    },
+    "promiseSingleSync": {
+      "error": "Waterfall hooks must have at least one argument",
+    },
+    "promiseSingleSyncWithArg": {
+      "type": "promise",
+      "value": 42,
     },
     "promiseSingleSyncWithArgCalled": 42,
   },

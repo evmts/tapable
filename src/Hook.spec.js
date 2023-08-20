@@ -4,7 +4,7 @@
 */
 'use strict'
 
-const SyncHook = require('../SyncHook')
+const SyncHook = require('./SyncHook')
 
 describe('Hook', () => {
   it('should allow to insert hooks before others and in stages', () => {

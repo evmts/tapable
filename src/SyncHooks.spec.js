@@ -5,10 +5,10 @@
 'use strict'
 
 const HookTester = require('./HookTester')
-const SyncHook = require('../SyncHook')
-const SyncBailHook = require('../SyncBailHook')
-const SyncWaterfallHook = require('../SyncWaterfallHook')
-const SyncLoopHook = require('../SyncLoopHook')
+const SyncHook = require('./SyncHook')
+const SyncBailHook = require('./SyncBailHook')
+const SyncWaterfallHook = require('./SyncWaterfallHook')
+const SyncLoopHook = require('./SyncLoopHook')
 
 describe('SyncHook', () => {
   it('should have to correct behavior', async () => {

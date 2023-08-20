@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`SyncBailHook should have to correct behavior 1`] = `
+exports[`SyncBailHook > should have to correct behavior 1`] = `
 {
   "async": {},
   "intercept": {},
@@ -257,7 +257,7 @@ exports[`SyncBailHook should have to correct behavior 1`] = `
 }
 `;
 
-exports[`SyncHook should have to correct behavior 1`] = `
+exports[`SyncHook > should have to correct behavior 1`] = `
 {
   "async": {},
   "intercept": {},
@@ -530,7 +530,7 @@ exports[`SyncHook should have to correct behavior 1`] = `
 }
 `;
 
-exports[`SyncLoopHook should have to correct behavior 1`] = `
+exports[`SyncLoopHook > should have to correct behavior 1`] = `
 {
   "async": {},
   "sync": {
@@ -540,8 +540,6 @@ exports[`SyncLoopHook should have to correct behavior 1`] = `
     },
     "callAsyncInterceptedSyncCalled1": 83,
     "callAsyncInterceptedSyncCalled2": 42,
-    "callAsyncInterceptedSyncCalledCall": 1,
-    "callAsyncInterceptedSyncCalledLoop": 83,
     "callAsyncInterceptedSyncCalledTap": 125,
     "callAsyncMultipleSync": {
       "type": "async",
@@ -567,8 +565,6 @@ exports[`SyncLoopHook should have to correct behavior 1`] = `
     },
     "callInterceptedSyncCalled1": 83,
     "callInterceptedSyncCalled2": 42,
-    "callInterceptedSyncCalledCall": 1,
-    "callInterceptedSyncCalledLoop": 83,
     "callInterceptedSyncCalledTap": 125,
     "callMultipleSync": {
       "type": "no result",
@@ -591,8 +587,6 @@ exports[`SyncLoopHook should have to correct behavior 1`] = `
     },
     "promiseInterceptedSyncCalled1": 83,
     "promiseInterceptedSyncCalled2": 42,
-    "promiseInterceptedSyncCalledCall": 1,
-    "promiseInterceptedSyncCalledLoop": 83,
     "promiseInterceptedSyncCalledTap": 125,
     "promiseMultipleSync": {
       "type": "promise",
@@ -617,7 +611,7 @@ exports[`SyncLoopHook should have to correct behavior 1`] = `
 }
 `;
 
-exports[`SyncWaterfallHook should have to correct behavior 1`] = `
+exports[`SyncWaterfallHook > should have to correct behavior 1`] = `
 {
   "async": {},
   "intercept": {},

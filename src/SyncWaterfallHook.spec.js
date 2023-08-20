@@ -1,10 +1,10 @@
 /*
-	MIT License http://www.opensource.org/licenses/mit-license.php
-	Author Tobias Koppers @sokra
+  MIT License http://www.opensource.org/licenses/mit-license.php
+  Author Tobias Koppers @sokra
 */
 'use strict'
 
-const SyncWaterfallHook = require('../SyncWaterfallHook')
+const SyncWaterfallHook = require('./SyncWaterfallHook')
 
 describe('SyncWaterfallHook', () => {
   it('should throw an error when hook has no argument', () => {
@@ -16,9 +16,9 @@ describe('SyncWaterfallHook', () => {
   it('should allow to create sync hooks', async () => {
     const hook = new SyncWaterfallHook(['arg1', 'arg2'])
 
-    const mock0 = jest.fn((arg) => `${arg},0`)
-    const mock1 = jest.fn((arg) => `${arg},1`)
-    const mock2 = jest.fn((arg) => `${arg},2`)
+    const mock0 = vi.fn((arg) => `${arg},0`)
+    const mock1 = vi.fn((arg) => `${arg},1`)
+    const mock2 = vi.fn((arg) => `${arg},2`)
     hook.tap('A', mock0)
     hook.tap('B', mock1)
     hook.tap('C', mock2)
@@ -49,15 +49,15 @@ describe('SyncWaterfallHook', () => {
   it('should allow to intercept calls', () => {
     const hook = new SyncWaterfallHook(['arg1', 'arg2'])
 
-    const mockCall = jest.fn()
-    const mock0 = jest.fn(() => 'mock0')
-    const mockRegister = jest.fn((x) => ({
+    const mockCall = vi.fn()
+    const mock0 = vi.fn(() => 'mock0')
+    const mockRegister = vi.fn((x) => ({
       name: 'huh',
       type: 'sync',
       fn: mock0,
     }))
 
-    const mock1 = jest.fn(() => 'mock1')
+    const mock1 = vi.fn(() => 'mock1')
     hook.tap('Test1', mock1)
 
     hook.intercept({
@@ -65,7 +65,7 @@ describe('SyncWaterfallHook', () => {
       register: mockRegister,
     })
 
-    const mock2 = jest.fn(() => 'mock2')
+    const mock2 = vi.fn(() => 'mock2')
     hook.tap('Test2', mock2)
 
     const returnValue = hook.call(1, 2)
@@ -116,8 +116,8 @@ describe('SyncWaterfallHook', () => {
   it('should allow to intercept calls', () => {
     const hook = new SyncWaterfallHook(['x'])
 
-    const mockCall = jest.fn()
-    const mockTap = jest.fn((x) => x)
+    const mockCall = vi.fn()
+    const mockTap = vi.fn((x) => x)
 
     hook.intercept({
       call: mockCall,

@@ -1,10 +1,10 @@
 /*
-	MIT License http://www.opensource.org/licenses/mit-license.php
-	Author Tobias Koppers @sokra
+  MIT License http://www.opensource.org/licenses/mit-license.php
+  Author Tobias Koppers @sokra
 */
 'use strict'
 
-const SyncHook = require('../SyncHook')
+const SyncHook = require('./SyncHook')
 
 describe('SyncHook', () => {
   it('should allow to create sync hooks', async () => {
@@ -17,24 +17,24 @@ describe('SyncHook', () => {
     await h0.promise()
     await new Promise((resolve) => h0.callAsync(resolve))
 
-    const mock0 = jest.fn()
+    const mock0 = vi.fn()
     h0.tap('A', mock0)
 
     h0.call()
 
     expect(mock0).toHaveBeenLastCalledWith()
 
-    const mock1 = jest.fn()
+    const mock1 = vi.fn()
     h0.tap('B', mock1)
 
     h0.call()
 
     expect(mock1).toHaveBeenLastCalledWith()
 
-    const mock2 = jest.fn()
-    const mock3 = jest.fn()
-    const mock4 = jest.fn()
-    const mock5 = jest.fn()
+    const mock2 = vi.fn()
+    const mock3 = vi.fn()
+    const mock4 = vi.fn()
+    const mock5 = vi.fn()
 
     h1.tap('C', mock2)
     h2.tap('D', mock3)
@@ -67,9 +67,9 @@ describe('SyncHook', () => {
 
   it('should sync execute hooks', () => {
     const h1 = new SyncHook(['a'])
-    const mockCall1 = jest.fn()
-    const mockCall2 = jest.fn(() => 'B')
-    const mockCall3 = jest.fn(() => 'C')
+    const mockCall1 = vi.fn()
+    const mockCall2 = vi.fn(() => 'B')
+    const mockCall3 = vi.fn(() => 'C')
     h1.tap('A', mockCall1)
     h1.tap('B', mockCall2)
     h1.tap('C', mockCall3)
@@ -82,15 +82,15 @@ describe('SyncHook', () => {
   it('should allow to intercept calls', () => {
     const hook = new SyncHook(['arg1', 'arg2'])
 
-    const mockCall = jest.fn()
-    const mock0 = jest.fn()
-    const mockRegister = jest.fn((x) => ({
+    const mockCall = vi.fn()
+    const mock0 = vi.fn()
+    const mockRegister = vi.fn((x) => ({
       name: 'huh',
       type: 'sync',
       fn: mock0,
     }))
 
-    const mock1 = jest.fn()
+    const mock1 = vi.fn()
     hook.tap('Test1', mock1)
 
     hook.intercept({
@@ -98,7 +98,7 @@ describe('SyncHook', () => {
       register: mockRegister,
     })
 
-    const mock2 = jest.fn()
+    const mock2 = vi.fn()
     hook.tap('Test2', mock2)
 
     hook.call(1, 2)
