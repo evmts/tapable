@@ -1,6 +1,6 @@
 /*
-	MIT License http://www.opensource.org/licenses/mit-license.php
-	Author Tobias Koppers @sokra
+  MIT License http://www.opensource.org/licenses/mit-license.php
+  Author Tobias Koppers @sokra
 */
 'use strict'
 
@@ -40,7 +40,5 @@ function SyncHook(args = [], name = undefined) {
   hook.compile = COMPILE
   return hook
 }
-
-SyncHook.prototype = null
 
 export default SyncHook
