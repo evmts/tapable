@@ -22,14 +22,14 @@
     "node": ">=6"
   },
   "files": [
-    "lib",
-    "!lib/__tests__",
+    "src",
+    "!src/__tests__",
     "tapable.d.ts"
   ],
-  "main": "lib/index.js",
+  "main": "dist/index.js",
   "types": "./tapable.d.ts",
   "browser": {
-    "util": "./lib/util-browser.js"
+    "util": "./dist/util-browser.js"
   },
   "scripts": {
     "test": "NODE_OPTIONS=--experimental-vm-modules jest",
