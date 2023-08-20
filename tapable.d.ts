@@ -160,45 +160,48 @@ export class MultiHook<H> {
   tapPromise(options: string | Tap, fn?: Function): void
 }
 
-import * as util from 'util';
+import * as util from 'util'
 
 const deprecateContext = util.deprecate(
   () => {},
   'Hook.context is deprecated and will be removed',
-);
+)
 
-type CallDelegate = (...args: any[]) => any;
+type CallDelegate = (...args: any[]) => any
 
-const CALL_DELEGATE: CallDelegate = function(this: Hook, ...args: any[]) {
-  this.call = this._createCall('sync');
-  return this.call(...args);
-};
+const CALL_DELEGATE: CallDelegate = function (this: Hook, ...args: any[]) {
+  this.call = this._createCall('sync')
+  return this.call(...args)
+}
 
-const CALL_ASYNC_DELEGATE: CallDelegate = function(this: Hook, ...args: any[]) {
-  this.callAsync = this._createCall('async');
-  return this.callAsync(...args);
-};
+const CALL_ASYNC_DELEGATE: CallDelegate = function (
+  this: Hook,
+  ...args: any[]
+) {
+  this.callAsync = this._createCall('async')
+  return this.callAsync(...args)
+}
 
-const PROMISE_DELEGATE: CallDelegate = function(this: Hook, ...args: any[]) {
-  this.promise = this._createCall('promise');
-  return this.promise(...args);
-};
+const PROMISE_DELEGATE: CallDelegate = function (this: Hook, ...args: any[]) {
+  this.promise = this._createCall('promise')
+  return this.promise(...args)
+}
 
 interface TapOptions {
-  name?: string;
-  before?: string | string[];
-  stage?: number;
-  type?: string;
-  fn?: Function;
-  context?: any;
+  name?: string
+  before?: string | string[]
+  stage?: number
+  type?: string
+  fn?: Function
+  context?: any
 }
 
 interface Interceptor {
-  register?: (options: TapOptions) => TapOptions;
+  register?: (options: TapOptions) => TapOptions
 }
 
 class Hook {
-  private _args: any[];
+  private _args: any[]
   public name?: string;
   public taps: TapOptions[] = [];
   public interceptors: Interceptor[] = [];
@@ -323,7 +326,7 @@ class Hook {
       before = new Set(item.before);
     }
 
-    let stage = item.stage || 0;
+    const stage = item.stage || 0;
     let i = this.taps.length;
 
     while (i > 0) {
@@ -333,7 +336,7 @@ class Hook {
 
       const xStage = x.stage || 0;
 
-      if (before && before.has(x.name!)) {
+      if (before?.has(x.name!)) {
         before.delete(x.name!);
         continue;
       }
@@ -354,6 +357,6 @@ class Hook {
   }
 }
 
-Object.setPrototypeOf(Hook.prototype, null);
+Object.setPrototypeOf(Hook.prototype, null)
 
-export default Hook;
+export default Hook

@@ -1,6 +1,12 @@
 {
   "files": {
-    "ignore": ["coverage", "node_modules", "dist", "pnpm-lock.yaml"]
+    "ignore": [
+      "coverage",
+      "node_modules",
+      "dist",
+      "pnpm-lock.yaml",
+      "tapable.d.ts"
+    ]
   },
   "formatter": {
     "enabled": true,

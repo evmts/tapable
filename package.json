@@ -1,8 +1,8 @@
 {
-  "name": "tapable",
+  "name": "@evmts/tapable",
   "version": "2.2.1",
-  "author": "Tobias Koppers @sokra",
-  "description": "Just a little module for plugins.",
+  "author": "William Cory @roninjin10",
+  "description": "Just a little module for plugins. Forked from Webpack tappable",
   "license": "MIT",
   "homepage": "https://github.com/webpack/tapable",
   "type": "module",

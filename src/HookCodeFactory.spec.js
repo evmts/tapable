@@ -63,14 +63,14 @@ describe('HookCodeFactory', () => {
         ],
         interceptors: [
           {
-            call: () => { },
-            tap: () => { },
+            call: () => {},
+            tap: () => {},
           },
           {
-            tap: () => { },
+            tap: () => {},
           },
           {
-            call: () => { },
+            call: () => {},
           },
         ],
       },

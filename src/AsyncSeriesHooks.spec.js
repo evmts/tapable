@@ -20,21 +20,21 @@ describe('AsyncSeriesHook', () => {
 
   it('should have tap method', async () => {
     await new Promise((resolve) => {
-    const hook = new AsyncSeriesHook([])
-    const mockTap = vi.fn()
-    hook.tap('somePlugin', mockTap)
-    hook.callAsync(() => resolve())
-    expect(mockTap).toHaveBeenCalledTimes(1)
+      const hook = new AsyncSeriesHook([])
+      const mockTap = vi.fn()
+      hook.tap('somePlugin', mockTap)
+      hook.callAsync(() => resolve())
+      expect(mockTap).toHaveBeenCalledTimes(1)
     })
   })
 
   it('should have promise method', async () => {
     await new Promise((resolve) => {
-    const hook = new AsyncSeriesHook([])
-    const mockTap = vi.fn()
-    hook.tap('somePlugin', mockTap)
-    hook.promise().then(() => resolve())
-    expect(mockTap).toHaveBeenCalledTimes(1)
+      const hook = new AsyncSeriesHook([])
+      const mockTap = vi.fn()
+      hook.tap('somePlugin', mockTap)
+      hook.promise().then(() => resolve())
+      expect(mockTap).toHaveBeenCalledTimes(1)
     })
   })
 
