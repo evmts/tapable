@@ -1,4 +1,4 @@
-const AsyncSeriesHook = require('./AsyncSeriesHook')
+import AsyncSeriesHook from './AsyncSeriesHook'
 
 describe('HookStackOverflow', () => {
   it('should not crash when compiling a large hook', () => {

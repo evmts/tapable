@@ -4,7 +4,7 @@
 */
 'use strict'
 
-const util = require('util')
+import * as  util from 'util'
 
 const defaultFactory = (key, hook) => hook
 
@@ -58,4 +58,4 @@ HookMap.prototype.tapPromise = util.deprecate(function (key, options, fn) {
   return this.for(key).tapPromise(options, fn)
 }, 'HookMap#tapPromise(key,…) is deprecated. Use HookMap#for(key).tapPromise(…) instead.')
 
-module.exports = HookMap
+export default HookMap

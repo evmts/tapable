@@ -4,8 +4,8 @@
 */
 'use strict'
 
-const Hook = require('./Hook')
-const HookCodeFactory = require('./HookCodeFactory')
+import Hook from './Hook'
+import HookCodeFactory from './HookCodeFactory'
 
 class SyncLoopHookCodeFactory extends HookCodeFactory {
   content({ onError, onDone, rethrowIfPossible }) {
@@ -43,4 +43,4 @@ function SyncLoopHook(args = [], name = undefined) {
 
 SyncLoopHook.prototype = null
 
-module.exports = SyncLoopHook
+export default SyncLoopHook

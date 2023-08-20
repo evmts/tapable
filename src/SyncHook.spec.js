@@ -4,7 +4,7 @@
 */
 'use strict'
 
-const SyncHook = require('./SyncHook')
+import SyncHook from './SyncHook'
 
 describe('SyncHook', () => {
   it('should allow to create sync hooks', async () => {

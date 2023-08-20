@@ -4,7 +4,7 @@
 */
 'use strict'
 
-const SyncWaterfallHook = require('./SyncWaterfallHook')
+import SyncWaterfallHook from './SyncWaterfallHook'
 
 describe('SyncWaterfallHook', () => {
   it('should throw an error when hook has no argument', () => {

@@ -4,14 +4,15 @@
 */
 'use strict'
 
-const HookCodeFactory = require('./HookCodeFactory')
+import prettier from 'prettier'
+import HookCodeFactory from './HookCodeFactory'
 
 const expectNoSyntaxError = (code) => {
   new Function('a, b, c', code)
 }
 
 const pretty = (code) => {
-  return require('prettier').format(code, { filepath: 'code.js' })
+  return prettier.format(code, { filepath: 'code.js' })
 }
 
 describe('HookCodeFactory', () => {

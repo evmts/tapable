@@ -4,8 +4,8 @@
 */
 'use strict'
 
-const Hook = require('./Hook')
-const HookCodeFactory = require('./HookCodeFactory')
+import Hook from './Hook'
+import HookCodeFactory from './HookCodeFactory'
 
 class AsyncSeriesWaterfallHookCodeFactory extends HookCodeFactory {
   content({ onError, onResult, onDone }) {
@@ -44,4 +44,4 @@ function AsyncSeriesWaterfallHook(args = [], name = undefined) {
 
 AsyncSeriesWaterfallHook.prototype = null
 
-module.exports = AsyncSeriesWaterfallHook
+export default AsyncSeriesWaterfallHook

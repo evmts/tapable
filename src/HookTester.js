@@ -1217,4 +1217,4 @@ class HookTester {
   }
 }
 
-module.exports = HookTester
+export default HookTester

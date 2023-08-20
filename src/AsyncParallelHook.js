@@ -4,8 +4,8 @@
 */
 'use strict'
 
-const Hook = require('./Hook')
-const HookCodeFactory = require('./HookCodeFactory')
+import Hook from './Hook'
+import HookCodeFactory from './HookCodeFactory'
 
 class AsyncParallelHookCodeFactory extends HookCodeFactory {
   content({ onError, onDone }) {
@@ -34,4 +34,4 @@ function AsyncParallelHook(args = [], name = undefined) {
 
 AsyncParallelHook.prototype = null
 
-module.exports = AsyncParallelHook
+export default AsyncParallelHook

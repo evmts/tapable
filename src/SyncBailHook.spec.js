@@ -4,7 +4,7 @@
 */
 'use strict'
 
-const SyncBailHook = require('./SyncBailHook')
+import SyncBailHook from './SyncBailHook'
 
 describe('SyncBailHook', () => {
   it('should allow to create sync bail hooks', async () => {

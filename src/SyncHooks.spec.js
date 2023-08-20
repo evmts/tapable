@@ -4,11 +4,11 @@
 */
 'use strict'
 
-const HookTester = require('./HookTester')
-const SyncHook = require('./SyncHook')
-const SyncBailHook = require('./SyncBailHook')
-const SyncWaterfallHook = require('./SyncWaterfallHook')
-const SyncLoopHook = require('./SyncLoopHook')
+import HookTester from './HookTester'
+import SyncBailHook from './SyncBailHook'
+import SyncHook from './SyncHook'
+import SyncLoopHook from './SyncLoopHook'
+import SyncWaterfallHook from './SyncWaterfallHook'
 
 describe('SyncHook', () => {
   it('should have to correct behavior', async () => {

@@ -4,7 +4,7 @@
 */
 'use strict'
 
-const Hook = require('./Hook')
+import Hook from './Hook'
 
 class MultiHook {
   constructor(hooks, name = undefined) {
@@ -51,4 +51,4 @@ class MultiHook {
   }
 }
 
-module.exports = MultiHook
+export default MultiHook

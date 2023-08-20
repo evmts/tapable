@@ -4,11 +4,11 @@
 */
 'use strict'
 
-const HookTester = require('./HookTester')
-const AsyncSeriesHook = require('./AsyncSeriesHook')
-const AsyncSeriesBailHook = require('./AsyncSeriesBailHook')
-const AsyncSeriesWaterfallHook = require('./AsyncSeriesWaterfallHook')
-const AsyncSeriesLoopHook = require('./AsyncSeriesLoopHook')
+import AsyncSeriesBailHook from './AsyncSeriesBailHook'
+import AsyncSeriesHook from './AsyncSeriesHook'
+import AsyncSeriesLoopHook from './AsyncSeriesLoopHook'
+import AsyncSeriesWaterfallHook from './AsyncSeriesWaterfallHook'
+import HookTester from './HookTester'
 
 describe('AsyncSeriesHook', () => {
   it('should not have call method', () => {

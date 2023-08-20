@@ -467,4 +467,4 @@ class HookCodeFactory {
   }
 }
 
-module.exports = HookCodeFactory
+export default HookCodeFactory

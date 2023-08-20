@@ -1,10 +1,4 @@
-/*
-	MIT License http://www.opensource.org/licenses/mit-license.php
-	Author Tobias Koppers @sokra
-*/
-'use strict'
-
-const SyncHook = require('./SyncHook')
+import SyncHook from './SyncHook'
 
 describe('Hook', () => {
   it('should allow to insert hooks before others and in stages', () => {

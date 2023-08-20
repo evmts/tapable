@@ -4,7 +4,7 @@
 */
 'use strict'
 
-const MultiHook = require('./MultiHook')
+import MultiHook from './MultiHook'
 
 describe('MultiHook', () => {
   const redirectedMethods = ['tap', 'tapAsync', 'tapPromise']
